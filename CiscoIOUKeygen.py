@@ -22,7 +22,7 @@ iouPad2 = b'\x80' + b'\0' * 39
 md5input = iouPad1 + iouPad2 + struct.pack('!i', ioukey) + iouPad1
 iouLicense = hashlib.md5(md5input).hexdigest()[:16]
 
-print("\nAdd the following text to ~/.iourc:")
+print("\nAdd the following text to /opt/unetlab/addons/iol/bin")
 print(f"[license]\n{hostname} = {iouLicense};\n")
 print("You can disable the phone home feature with something like:")
 print("echo '127.0.0.127 xml.cisco.com' >> /etc/hosts")
